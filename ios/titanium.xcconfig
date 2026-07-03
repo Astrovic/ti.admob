@@ -1,8 +1,10 @@
-TITANIUM_SDK_VERSION = 11.1.1.GA
+TITANIUM_SDK_VERSION = 13.2.0.GA
 
-//
-// THESE SHOULD BE OK GENERALLY AS-IS
-//
 TITANIUM_SDK = /Users/$(USER)/Library/Application Support/Titanium/mobilesdk/osx/$(TITANIUM_SDK_VERSION)
 HEADER_SEARCH_PATHS = $(inherited) "$(TITANIUM_SDK)/iphone/include"
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$(TITANIUM_SDK)/iphone/Frameworks/**"
+
+// 1. Percorsi ESCLUSIVI per il Dispositivo Reale (iPhone/iPad)
+FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*] = $(inherited) "$(TITANIUM_SDK)/iphone/Frameworks/TitaniumKit.xcframework/ios-arm64" "$(TITANIUM_SDK)/iphone/Frameworks/tiverify.xcframework/ios-arm64"
+
+// 2. Percorsi ESCLUSIVI per il Simulatore
+FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*] = $(inherited) "$(TITANIUM_SDK)/iphone/Frameworks/TitaniumKit.xcframework/ios-arm64_x86_64-simulator" "$(TITANIUM_SDK)/iphone/Frameworks/tiverify.xcframework/ios-arm64_x86_64-simulator"

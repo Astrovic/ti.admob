@@ -39,7 +39,7 @@ NS_SWIFT_NAME(Request)
 
 /// Scene object. Used in multiscene apps to request ads of the appropriate size. If this is nil,
 /// uses the application's key window scene.
-@property(nonatomic, nullable, weak) UIWindowScene *scene API_AVAILABLE(ios(13.0));
+@property(nonatomic, nullable, weak) UIWindowScene *scene;
 
 #pragma mark Contextual Information
 
@@ -56,6 +56,10 @@ NS_SWIFT_NAME(Request)
 /// content.
 @property(nonatomic, copy, nullable)
     NSArray<NSString *> *neighboringContentURLStrings NS_SWIFT_NAME(neighboringContentURLs);
+
+/// An identifier for a placement in reporting. A value set here will be set onto any ad returned by
+/// this request.
+@property(atomic, readwrite) int64_t placementID;
 
 #pragma mark Request Agent Information
 

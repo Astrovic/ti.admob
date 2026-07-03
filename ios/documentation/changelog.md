@@ -1,5 +1,16 @@
 # Change Log
 
+### v9.0.0
+- Migrated to Google Mobile Ads SDK v13.5.0 (https://developers.google.com/admob/ios/migration)
+- Updated code to support new adaptive banner sizes (GADLargeAnchoredAdaptiveBannerAdSizeWithWidth)
+- Update Meta Audience Network SDK 6.21.1 (https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/ios/changelog#6_21_1)
+- Meta Audience Network Adapter 6.21.1.1 (https://developers.google.com/admob/ios/mediation/meta#version-6.21.1.1)
+- Update InMobi SDK 11.3.0 (https://support.inmobi.com/monetize/sdk-documentation/download-sdk)
+- Update InMobiAdapter 11.3.0.0 (https://developers.google.com/admob/ios/mediation/inmobi#version-11.3.0.0)
+- Updated Titanium SDK requirement to 13.2.0.GA
+- Migrated to XCFramework structure for all dependencies and integrated privacy manifests
+- Updated build configuration to support iOS 15.0+ and modern Apple Silicon architecture
+
 ### v8.1.0
 - Update Google Mobile Ads SDK 12.6.0 (https://github.com/CocoaPods/Specs/tree/master/Specs/5/9/a/Google-Mobile-Ads-SDK/12.6.0)
 - Update Meta Audience Network SDK 6.20.0 (https://developers.facebook.com/docs/audience-network/setting-up/platform-setup/ios/changelog#6_20_0)

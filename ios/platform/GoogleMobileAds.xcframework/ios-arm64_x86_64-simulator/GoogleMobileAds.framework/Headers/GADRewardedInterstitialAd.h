@@ -49,6 +49,10 @@ NS_SWIFT_NAME(RewardedInterstitialAd)
 /// Called when the ad is estimated to have earned money. Available for allowlisted accounts only.
 @property(nonatomic, nullable, copy) GADPaidEventHandler paidEventHandler;
 
+/// An identifier for a placement in reporting. This property must be set prior to presenting the
+/// ad.
+@property(nonatomic, readwrite) int64_t placementID;
+
 /// Loads a rewarded interstitial ad.
 ///
 /// @param adUnitID An ad unit ID created in the AdMob or Ad Manager UI.
@@ -57,7 +61,7 @@ NS_SWIFT_NAME(RewardedInterstitialAd)
 + (void)loadWithAdUnitID:(nonnull NSString *)adUnitID
                  request:(nullable GADRequest *)request
        completionHandler:(nonnull GADRewardedInterstitialAdLoadCompletionHandler)completionHandler
-    NS_SWIFT_NAME(load(with:request:completionHandler:));
+    NS_SWIFT_NAME(load(with:request:completionHandler:))NS_SWIFT_SENDING;
 
 /// Loads a rewarded interstitial ad.
 ///
@@ -66,7 +70,7 @@ NS_SWIFT_NAME(RewardedInterstitialAd)
 + (void)loadWithAdResponseString:(nonnull NSString *)adResponseString
                completionHandler:
                    (nonnull GADRewardedInterstitialAdLoadCompletionHandler)completionHandler
-    NS_SWIFT_NAME(load(with:completionHandler:));
+    NS_SWIFT_NAME(load(with:completionHandler:))NS_SWIFT_SENDING;
 
 /// Indicates whether the rewarded interstitial ad can be presented from the provided root view
 /// controller. Must be called on the main thread.

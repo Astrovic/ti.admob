@@ -26,6 +26,7 @@ framework module FBAudienceNetwork {
     link framework "UIKit"
     link framework "WebKit"
     link framework "VideoToolbox"
+    link framework "AppTrackingTransparency"
 
     link "c++"
     link "xml2"

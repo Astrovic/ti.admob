@@ -33,7 +33,7 @@ NS_SWIFT_NAME(AppOpenAd)
 + (void)loadWithAdUnitID:(nonnull NSString *)adUnitID
                  request:(nullable GADRequest *)request
        completionHandler:(nonnull GADAppOpenAdLoadCompletionHandler)completionHandler
-    NS_SWIFT_NAME(load(with:request:completionHandler:));
+    NS_SWIFT_NAME(load(with:request:completionHandler:))NS_SWIFT_SENDING;
 
 /// Loads an app open ad.
 ///
@@ -41,7 +41,7 @@ NS_SWIFT_NAME(AppOpenAd)
 /// @param completionHandler A handler to execute when the load operation finishes or times out.
 + (void)loadWithAdResponseString:(nonnull NSString *)adResponseString
                completionHandler:(nonnull GADAppOpenAdLoadCompletionHandler)completionHandler
-    NS_SWIFT_NAME(load(with:completionHandler:));
+    NS_SWIFT_NAME(load(with:completionHandler:))NS_SWIFT_SENDING;
 
 /// Optional delegate object that receives notifications about presentation and dismissal of full
 /// screen content from this ad. Full screen content covers your application's content. The delegate
@@ -57,6 +57,10 @@ NS_SWIFT_NAME(AppOpenAd)
 
 /// Called when the ad is estimated to have earned money. Available for allowlisted accounts only.
 @property(nonatomic, nullable, copy) GADPaidEventHandler paidEventHandler;
+
+/// An identifier for a placement in reporting. This property must be set prior to presenting the
+/// ad.
+@property(nonatomic, readwrite) int64_t placementID;
 
 /// Indicates whether the app open ad can be presented from the provided root view controller. Must
 /// be called on the main thread.
