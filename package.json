@@ -4,6 +4,9 @@
   "description": "Use the Google Admob Module in Appcelerator Titanium.",
   "scripts": {
     "commit": "git-cz",
+    "prepare:ios": "./ios/scripts/ensure-pangle.sh",
+    "build:ios": "npm run prepare:ios && cd ios && ti build -p ios --build-only",
+    "build:ios:clean": "rm -rf ios/build ios/dist && npm run build:ios",
     "format": "npm run format:android && npm run format:ios && npm run format:js",
     "format:android": "npm run lint:android -- --fix",
     "format:ios": "npm run lint:ios -- --fix",

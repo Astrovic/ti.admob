@@ -15,8 +15,10 @@ import CryptoKit
 import Darwin
 import Foundation
 @_exported import InMobiSDK
+import MachO
 import MetricKit
 import ObjectiveC
+import PassKit
 import InMobiSDK.Private
 import StoreKit.SKAdImpression
 import SQLite3
@@ -343,6 +345,8 @@ import ObjectiveC.runtime
   @objc public var webviewModeDictionary: InMobiSDK.WebViewModeDictionaryConfig
   @objc public var gestureConfig: InMobiSDK.GestureConfig
   @objc public var enableHtmlUrlPrefetch: Swift.Bool
+  @objc public var enableJSNavigationAsClick: Swift.Bool
+  @objc public var handleWebProcessTermination: Swift.Bool
   @objc public func enablePubMuteControl_() -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
@@ -473,8 +477,11 @@ import ObjectiveC.runtime
 @_inheritsConvenienceInitializers @objc public class CustomBrowserConfig : ObjectiveC.NSObject {
   @objc public var userClickGraceTime: Swift.Double
   @objc public var shouldHandleUniversalURL: Swift.Bool
+  @objc public var dismissOnOutsideTap: Swift.Bool
+  @objc public var allowJSPopup: Swift.Bool
   @objc public var appleScheme: [Swift.String]
   @objc public var interstitial: InMobiSDK.CustomBrowserInternalConfig
+  @objc public var banner: InMobiSDK.CustomBrowserInternalConfig
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -482,6 +489,7 @@ import ObjectiveC.runtime
 }
 @_hasMissingDesignatedInitializers @objc public class CustomBrowserInternalConfig : ObjectiveC.NSObject {
   @objc public var loaderTimeout: Swift.Double
+  @objc public var loaderOpacity: Swift.Double
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -539,6 +547,7 @@ public enum IMNewPingPriority : Swift.String, Swift.Codable {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class IMSdk : ObjectiveC.NSObject {
+  @objc public class func isSDKInitialized() -> Swift.Bool
   @objc public class func initWithAccountID(_ accountID: Swift.String, andCompletionHandler completionBlock: (((any Swift.Error)?) -> Swift.Void)? = nil)
   @objc public class func initWithAccountID(_ accountID: Swift.String, consentDictionary: [Swift.String : Any]?, andCompletionHandler completionBlock: (((any Swift.Error)?) -> Swift.Void)? = nil)
   @available(*, deprecated, message: "Please use new API initWithAccountID:consentDictionary:andCompletionHandler: as this API can be removed in future")
@@ -1061,6 +1070,21 @@ extension InMobiSDK.IMAudio {
   @objc public var purchases: InMobiSDK.PurchasesConfig
   @objc public var publisher: InMobiSDK.PublisherConfig
   @objc public var experiments: InMobiSDK.ExperimentsConfig
+  @objc public var fraud: InMobiSDK.FraudSignalConfig
+  @objc public var appOwnership: InMobiSDK.LPAppOwnershipConfig
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers public class FraudSignalConfig : ObjectiveC.NSObject {
+  public var installSourceEnabled: Swift.Bool
+  public var jailBrokenEnabled: Swift.Bool
+  public var debuggerAttachedEnabled: Swift.Bool
+  public var hookEnabled: Swift.Bool
+  public var bundleIdMismatchEnabled: Swift.Bool
+  public var simulatorEnabled: Swift.Bool
+  public var appInstallTimeEnabled: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1086,6 +1110,7 @@ extension InMobiSDK.IMAudio {
   case depthNative
   case count
   case userRetention
+  case duration
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -1094,6 +1119,11 @@ extension InMobiSDK.IMAudio {
 }
 @_inheritsConvenienceInitializers @objc public class SessionConfig : ObjectiveC.NSObject {
   @objc public var control: [Swift.Int]
+  @objc public var fgBgModelEnabled: Swift.Bool
+  @objc public var timeoutSeconds: Swift.Int
+  @objc public var timeoutMillis: Swift.UInt64 {
+    @objc get
+  }
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1105,6 +1135,7 @@ extension InMobiSDK.IMAudio {
   @objc public var url: Swift.String
   @objc public var timeout: Swift.Int
   @objc public var maxRetries: Swift.Int
+  @objc public var latOptOutCheck: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1152,6 +1183,7 @@ extension InMobiSDK.IMAudio {
   @objc public var inapp: Swift.Bool
   @objc public var restore: Swift.Bool
   @objc public var inappV2: Swift.Bool
+  @objc public var applePay: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1186,6 +1218,7 @@ extension InMobiSDK.IMAudio {
 }
 @_inheritsConvenienceInitializers @objc public class IMDepthPPS : ObjectiveC.NSObject {
   @objc public var enabled: Swift.Bool
+  @objc public var sessionEnabled: Swift.Bool
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1193,6 +1226,39 @@ extension InMobiSDK.IMAudio {
 }
 @_inheritsConvenienceInitializers @objc public class ExperimentsConfig : ObjectiveC.NSObject {
   @objc public var networkRevamp: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class LPAppOwnershipFormatLoaderConfig : ObjectiveC.NSObject {
+  @objc public var enabled: Swift.Bool
+  @objc public var opacity: Swift.Double
+  @objc override dynamic public init()
+  public init(enabled: Swift.Bool = true, opacity: Swift.Double = 0.1)
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class LPAppOwnershipFormatConfig : ObjectiveC.NSObject {
+  @objc public var inNative: Swift.Int
+  @objc public var inCustom: Swift.Int
+  @objc public var exNative: Swift.Int
+  @objc public var skStore: Swift.Int
+  @objc public var loader: InMobiSDK.LPAppOwnershipFormatLoaderConfig
+  @objc override dynamic public init()
+  public init(inNative: Swift.Int = 2000, inCustom: Swift.Int = 2000, exNative: Swift.Int = 2000, skStore: Swift.Int = 2000, loader: InMobiSDK.LPAppOwnershipFormatLoaderConfig = LPAppOwnershipFormatLoaderConfig())
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class LPAppOwnershipConfig : ObjectiveC.NSObject {
+  @objc public var banner: InMobiSDK.LPAppOwnershipFormatConfig
+  @objc public var inter: InMobiSDK.LPAppOwnershipFormatConfig
+  @objc public var native: InMobiSDK.LPAppOwnershipFormatConfig
+  @objc public var enabled: Swift.Bool
+  @objc public var ttl: Swift.Int
+  @objc public var popupDetection: Swift.Int
   @objc override dynamic public init()
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -1257,6 +1323,16 @@ extension InMobiSDK.AnyDictionary : Swift.Encodable {
 }
 #warning("Long Term: Need to Re Name to IMImpressionType")
 #warning("Long Term: Need relook as per old IMInMobiViewabilityModel model after renderview is converted")
+@objc @_hasMissingDesignatedInitializers @objcMembers public class LPAppOwnershipModel : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var enabled: Swift.Bool
+  @objc public var url: Swift.String?
+  @objc public var id: Swift.String?
+  @objc public var resolveRedirection: Swift.Bool
+  @objc public var enableAutoSKStore: Swift.Bool
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
 #warning("Convert to camel case")
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ConfigManager : ObjectiveC.NSObject {
   @objc public static let shared: InMobiSDK.ConfigManager
@@ -1422,6 +1498,27 @@ extension InMobiSDK.AnyDictionary : Swift.Encodable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 #warning("Long Term: IMOMImpressionType may need to be declared in IMCommonUtils")
+@objc final public class SynapsInstalledAppModel : ObjectiveC.NSObject, Swift.Codable {
+  final public let id: Swift.String
+  final public let domain: Swift.String?
+  @objc public init(id: Swift.String, domain: Swift.String?)
+  @objc deinit
+  final public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class IMCustomAlertViewController : UIKit.UIViewController, UIKit.UIGestureRecognizerDelegate {
+  @objc @_Concurrency.MainActor @preconcurrency public var onConfirm: (() -> Swift.Void)?
+  @objc @_Concurrency.MainActor @preconcurrency public var onCancel: (() -> Swift.Void)?
+  @objc @_Concurrency.MainActor @preconcurrency public var inputText: Swift.String? {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc(configureWithTitle:message:showCancelButton:showTextField:defaultInputText:dismissOnOutsideTap:) @_Concurrency.MainActor @preconcurrency public func configure(title: Swift.String?, message: Swift.String?, showCancelButton: Swift.Bool, showsTextField: Swift.Bool, textFieldDefaultText: Swift.String?, dismissOnOutsideTap: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class PingManager : ObjectiveC.NSObject {
   @objc public static let shared: InMobiSDK.PingManager
   @objc public var isTelemetryEnabled: Swift.Bool
@@ -1671,6 +1768,11 @@ extension InMobiSDK.AnyDictionary : Swift.Encodable {
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class IMAppOwnershipEventPayloadBuilder : ObjectiveC.NSObject {
+  @objc(trackerMacroMapWithURL:appOwnershipID:) public static func trackerMacroMap(withURL url: Swift.String?, appOwnershipID: Swift.String?) -> Foundation.NSMutableDictionary?
+  @objc override dynamic public init()
+  @objc deinit
 }
 @objc public class IMWatermark : ObjectiveC.NSObject {
   @objc public var imageData: Foundation.Data {
@@ -1938,6 +2040,8 @@ extension InMobiSDK.IMBannerAudioStatus : Swift.Sendable {}
 extension InMobiSDK.IMBannerAudioStatus : Swift.BitwiseCopyable {}
 extension InMobiSDK.SignalConfig : Swift.Encodable {}
 extension InMobiSDK.SignalConfig : Swift.Decodable {}
+extension InMobiSDK.FraudSignalConfig : Swift.Encodable {}
+extension InMobiSDK.FraudSignalConfig : Swift.Decodable {}
 extension InMobiSDK.BloomFilterServiceConfig : Swift.Encodable {}
 extension InMobiSDK.BloomFilterServiceConfig : Swift.Decodable {}
 extension InMobiSDK.IMSessionSignalsType : Swift.Equatable {}
@@ -1965,6 +2069,12 @@ extension InMobiSDK.IMDepthPPS : Swift.Encodable {}
 extension InMobiSDK.IMDepthPPS : Swift.Decodable {}
 extension InMobiSDK.ExperimentsConfig : Swift.Encodable {}
 extension InMobiSDK.ExperimentsConfig : Swift.Decodable {}
+extension InMobiSDK.LPAppOwnershipFormatLoaderConfig : Swift.Encodable {}
+extension InMobiSDK.LPAppOwnershipFormatLoaderConfig : Swift.Decodable {}
+extension InMobiSDK.LPAppOwnershipFormatConfig : Swift.Encodable {}
+extension InMobiSDK.LPAppOwnershipFormatConfig : Swift.Decodable {}
+extension InMobiSDK.LPAppOwnershipConfig : Swift.Encodable {}
+extension InMobiSDK.LPAppOwnershipConfig : Swift.Decodable {}
 extension InMobiSDK.IMRemoteLogLevel : Swift.Equatable {}
 extension InMobiSDK.IMRemoteLogLevel : Swift.Hashable {}
 extension InMobiSDK.IMRemoteLogLevel : Swift.RawRepresentable {}

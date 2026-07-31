@@ -33,3 +33,12 @@ ios/admob.xcodeproj/project.xcworkspace/xcuserdata/*
 node_modules/
 
 TESTS-*.xml
+
+# ---------------------------------------------------------------------------
+# Pangle SDK — binaries exceed GitHub's 100 MB limit.
+# Downloaded automatically by ios/scripts/ensure-pangle.sh.
+# Run `npm run build:ios` to restore before building locally.
+# ---------------------------------------------------------------------------
+ios/platform/PAGAdSDK.xcframework/
+ios/platform/PAGAdSDK.bundle/
+ios/platform/TikTokBusinessSDK.xcframework/

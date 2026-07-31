@@ -1,5 +1,38 @@
 # Change Log
 
+### v9.2.0
+- Update Google Mobile Ads SDK v13.7.0 (https://developers.google.com/admob/ios/migration)
+- Update InMobi SDK 11.4.0 (https://support.inmobi.com/monetize/sdk-documentation/download-sdk)
+- Update InMobiAdapter 11.4.0.0 (https://developers.google.com/admob/ios/mediation/inmobi#version-11.4.0.0)
+- Added Pangle SDK 8.2.0.7 (https://www.pangleglobal.com/publisher/integration)
+- Added PangleAdapter 8.2.0.7 (https://developers.google.com/admob/ios/mediation/pangle#version-8.2.0.7)
+
+#### Building the module locally
+
+```bash
+npm run build:ios
+```
+
+This command will:
+1. Automatically download the Pangle SDK into `ios/platform/` if not already present
+2. Build the module with `ti build -p ios --build-only`
+
+For a clean build (clears `ios/build/` and `ios/dist/` but keeps downloaded SDKs):
+
+```bash
+npm run build:ios:clean
+```
+
+#### Pangle SDK
+
+The Pangle SDK (`PAGAdSDK.xcframework`, `PAGAdSDK.bundle`, `TikTokBusinessSDK.xcframework`)
+is not stored in Git because its binaries exceed GitHub's 100 MB file size limit.
+
+Running `npm run build:ios` downloads it automatically from the official Pangle CDN.
+To update the Pangle SDK version, edit the `PANGLE_VERSION` and `PANGLE_URL` variables
+at the top of `ios/scripts/ensure-pangle.sh`.
+
+
 ### v9.0.0
 - Migrated to Google Mobile Ads SDK v13.5.0 (https://developers.google.com/admob/ios/migration)
 - Updated code to support new adaptive banner sizes (GADLargeAnchoredAdaptiveBannerAdSizeWithWidth)

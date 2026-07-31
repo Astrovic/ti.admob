@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/InMobiSDK-Swift.h</key>
 		<data>
-		B7GZqvLOzUHirwoLvQs3X6h6U8E=
+		qLb+WDpgYmxtc7lt+cpAArMe+2g=
 		</data>
 		<key>Headers/InMobiSDK.h</key>
 		<data>
@@ -18,47 +18,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		58fMmJqSGuEnvgAqf56JvEDnwu8=
+		HMoZ9CXmAlJJI7KiS9eR9f1bixY=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		rZo1x6/suUPkdOZ9bEecW136+PU=
+		QgPqYTMJQlz29jsiCAJXLuNJPw0=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		SxHr5Jt/kZtTsJ8F6JZn3CFjRac=
+		6Gmjc4xYCASWg4NyssJPVhiu5D0=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KBXJrFaH0yMPysEJ9unat8ezvok=
+		yeWCug/SEM5tDZU2g6Kz0WeK/BI=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SxHr5Jt/kZtTsJ8F6JZn3CFjRac=
+		6Gmjc4xYCASWg4NyssJPVhiu5D0=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		QeSw0oaMIy/h4hEoPIXPluHxTSU=
+		XKzaNH+1emrjWK+04Kd9BuNyZto=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		rZo1x6/suUPkdOZ9bEecW136+PU=
+		QgPqYTMJQlz29jsiCAJXLuNJPw0=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		OeiOoj/Oj/Mv0sNupM4s9pWJObk=
+		xkSHMQlgKKPjDeBJwkDiK9Mk3j8=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		42AzE5CQLH9l3zVzP0/+9WOze/E=
+		YbnZsufC4sUKgvHZbj4RLhkE9rU=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		OeiOoj/Oj/Mv0sNupM4s9pWJObk=
+		xkSHMQlgKKPjDeBJwkDiK9Mk3j8=
 		</data>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		phxDX/MDz/RdJhm5xdZtgSa+m0E=
+		tCXu77m7b1dLsAnyxd0BW9ZgnKg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -196,9 +196,13 @@
 		<data>
 		pgSnEupkD7pwfXKrUyl6LjWFv/M=
 		</data>
+		<key>PrivateHeaders/IMEmbeddedBrowser+Private.h</key>
+		<data>
+		mxHeHtXohI3/IEcIVctyAnNQJbM=
+		</data>
 		<key>PrivateHeaders/IMEmbeddedBrowser.h</key>
 		<data>
-		URLZjZ3R96DLXFJYTR0v+PXa5D4=
+		c9Xjn/K0ke1VEPhbmY4Onov0RNI=
 		</data>
 		<key>PrivateHeaders/IMErrorLogger.h</key>
 		<data>
@@ -236,13 +240,17 @@
 		<data>
 		qftUVJGtg9Aes3E6XyLLfjiBLNM=
 		</data>
+		<key>PrivateHeaders/IMLandingPageParser+AppOwnership.h</key>
+		<data>
+		S1MwH6jQfywpY4zrUMDxSisxDjc=
+		</data>
 		<key>PrivateHeaders/IMLandingPageParser.h</key>
 		<data>
-		ojzwC0uopMVHRmWo1n0TlA/BGN8=
+		zE951W7GgFAo0cJbrdpsdC+Lex4=
 		</data>
 		<key>PrivateHeaders/IMLandingPageProcessor.h</key>
 		<data>
-		6zxtBryjTntHK8Ixmor6pXIa+Ok=
+		CVIclW7FQNHR2EaE88530sq5KsE=
 		</data>
 		<key>PrivateHeaders/IMMediaManager.h</key>
 		<data>
@@ -366,7 +374,7 @@
 		</data>
 		<key>PrivateHeaders/IMRenderView.h</key>
 		<data>
-		ujo/ukmDMwZxBjOcocic6CXdwsY=
+		0hkEPxQW/Ij9PJbXLdSu/eMkP00=
 		</data>
 		<key>PrivateHeaders/IMRenderViewController.h</key>
 		<data>
@@ -418,7 +426,7 @@
 		</data>
 		<key>PrivateHeaders/IMSDKCommonUtil.h</key>
 		<data>
-		iVs+loaacnjxoPnJuQ/VZgGh7Eg=
+		B+kSSyQhJhQBIMV1Z09ZYiwkSQM=
 		</data>
 		<key>PrivateHeaders/IMSDKCommonsNetworkReachabilityObjc.h</key>
 		<data>
@@ -426,7 +434,7 @@
 		</data>
 		<key>PrivateHeaders/IMSDKConstant.h</key>
 		<data>
-		eSfackIyuT0yBGwT5NfM4XwdbMg=
+		HhKP1RuOebc8+pCi7tCe8deDewQ=
 		</data>
 		<key>PrivateHeaders/IMSDKSKANUtil.h</key>
 		<data>
@@ -452,9 +460,17 @@
 		<data>
 		82ZnViyArNipKghFQa90lUuq0Xw=
 		</data>
+		<key>PrivateHeaders/IMSKStoreManager+AppOwnership.h</key>
+		<data>
+		g5OO96XXOdnffcEFca+5JQkZsos=
+		</data>
+		<key>PrivateHeaders/IMSKStoreManager+Private.h</key>
+		<data>
+		X5WiJqs28IJIbkdimy0vYNnK8wI=
+		</data>
 		<key>PrivateHeaders/IMSKStoreManager.h</key>
 		<data>
-		pM5qBYq2cf1HUvAHOaGi8ej7eAs=
+		GjuolzOZo3oR5IT85Jv93N4ZwEs=
 		</data>
 		<key>PrivateHeaders/IMSKStoreProcessor.h</key>
 		<data>
@@ -478,7 +494,7 @@
 		</data>
 		<key>PrivateHeaders/IMTelemetryEvent.h</key>
 		<data>
-		xRbaD0fFhy8Xml6wK6OfW0cHQAk=
+		j5oU3uAunjrwvVBdHimMIcAp6rY=
 		</data>
 		<key>PrivateHeaders/IMTelemetryRequest.h</key>
 		<data>
@@ -518,15 +534,23 @@
 		</data>
 		<key>PrivateHeaders/IMViewProcessor+EmbeddedBrowser.h</key>
 		<data>
-		FzZLka/rY0jr4UU8Tmmzp6BetiQ=
+		HBiGNTLJeGUUeBJ2sONUgHayBnI=
+		</data>
+		<key>PrivateHeaders/IMViewProcessor+EmbeddedBrowserAppOwnership.h</key>
+		<data>
+		szMo4LA++1nBWM8mFMXLBB9qYEI=
+		</data>
+		<key>PrivateHeaders/IMViewProcessor+LandingPageLoadingOverlay.h</key>
+		<data>
+		Ehjm6BkvBCVU7hRv69INfl6WBlI=
 		</data>
 		<key>PrivateHeaders/IMViewProcessor+Private.h</key>
 		<data>
-		N2xAfAu24LvOtbAIJXBT3EY4y0g=
+		vxaXAh8Jjx5zdW4skZxCG/tJLJ8=
 		</data>
 		<key>PrivateHeaders/IMViewProcessor.h</key>
 		<data>
-		oHvPDVYjN/BuG8b9v6opmVMb5sE=
+		fIa4Tlpk8FVkj+hQNoJ78gD+u6Y=
 		</data>
 		<key>PrivateHeaders/IMViewability.h</key>
 		<data>
@@ -542,7 +566,7 @@
 		</data>
 		<key>PrivateHeaders/IMWKWebViewController.h</key>
 		<data>
-		kbmWhulQk/3i5WMl9P1dAlIT9UE=
+		LOu9MRVyzIIqKrZ8qmScfRVVN1c=
 		</data>
 		<key>PrivateHeaders/IMWebToNativeCall.h</key>
 		<data>
@@ -650,7 +674,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CzMtods0JFE39XDD2T7Q4qhDNVS/8hNnGFJ0bJZhXFs=
+			WWUGkTOZqJlmojpDHdQZ78+Yl0Edp+THkFSVAD2XKqU=
 			</data>
 		</dict>
 		<key>Headers/InMobiSDK.h</key>
@@ -664,70 +688,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IpmP8ELPTrwiUkPPzGt3HMu56B953qAtY2goCIBABMU=
+			aMfvNS8yt/oTBSLTKRF8pRGDIHFW86wdBB29bsHVkec=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J1p736WDBdnMQ9hbEqkl6am9VPBHlyYULCp8lj2dpaU=
+			SA04wHA16rPBTEW3DucnVRNjbWnQ/UPvfgvVAnFHaMA=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dVT/ovdgV1Cc7WnQMZt16fJSkbRoB9kASwcaCD2GdUc=
+			M6KEdB2Qy+9BE8zG3kxOrIZJi54XSF0ZiqVEm/UnpMk=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			J1p736WDBdnMQ9hbEqkl6am9VPBHlyYULCp8lj2dpaU=
+			SA04wHA16rPBTEW3DucnVRNjbWnQ/UPvfgvVAnFHaMA=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7tVYJ3rOCW8k998J5bDSIAXZHOaQgZPP8vOiFeDBwEE=
+			mRqjgRV/bK1+YZqimiaq31ZBhUuLHAHXeksw/4tZWrs=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IpmP8ELPTrwiUkPPzGt3HMu56B953qAtY2goCIBABMU=
+			aMfvNS8yt/oTBSLTKRF8pRGDIHFW86wdBB29bsHVkec=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dVCqEpLlMDFpzgiB+YHBIkELdr6kjTvShQpq/zU8QbA=
+			308aNXtUKmox8nXTU/OpoLaYWSm8iLKLoyO2WENqnSY=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dmjoR6Gp7bs9iCT/KrylJ0TSSo7WBsNX/v6OfBgF1Wc=
+			pKtm4wZ5ym9fKtekojuIPxLP/rUBac/YcKIZafQeocQ=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dVCqEpLlMDFpzgiB+YHBIkELdr6kjTvShQpq/zU8QbA=
+			308aNXtUKmox8nXTU/OpoLaYWSm8iLKLoyO2WENqnSY=
 			</data>
 		</dict>
 		<key>Modules/InMobiSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D/YLVbGoHCWc/QkW0kSxVpIQjjYNO4PPZV8YukQKRh8=
+			W+i68PlYsS0dBOEBjfAwKqjgOUYub+anGnWtHshms2s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -968,11 +992,18 @@
 			BJU4yW4Vv2DwEJ6n17r1ZFsM1t5BDRZyWVkiIlmKCyA=
 			</data>
 		</dict>
+		<key>PrivateHeaders/IMEmbeddedBrowser+Private.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qOhysWk/9nIVrbetfHJT+xNOgdnEN2HhHeaenHt0voY=
+			</data>
+		</dict>
 		<key>PrivateHeaders/IMEmbeddedBrowser.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hzj5/dvo6HkRIcZG9Ehw9gl/Ko+V1l9Sr86uPR8N+bY=
+			19iKIpyzaI91YcyjL7IZgi1ns1nzHFVx+a5vr/JQWWI=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMErrorLogger.h</key>
@@ -1038,18 +1069,25 @@
 			0PItwyZVEs9ItCNh2x4I7SGqUyu82zY1lOz347hAVn0=
 			</data>
 		</dict>
+		<key>PrivateHeaders/IMLandingPageParser+AppOwnership.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OWq5fQVuq/xKHkuZzxlxak0KTqSQtu4TI8TfLTCXEsk=
+			</data>
+		</dict>
 		<key>PrivateHeaders/IMLandingPageParser.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oxk2+g8378mB1sD+IA+GJJzJb9cctbuMy7dLmA1f520=
+			CEYeVvPcsMEOdAQ5pCh94mEu72qN+Q8GJljH4BbQyBU=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMLandingPageProcessor.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pSwYKTwhZK1ESTfZZFu5dUubcg6Fb52ms3InIdDs/oQ=
+			R8LDAroRg1tzlMKklc0jNpH30tAqPbQb6Mz/31erz6c=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMMediaManager.h</key>
@@ -1266,7 +1304,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6aiKyFCqDiZQqE4eHY6H0fITDA0rW8lui43xTl6/wfM=
+			Ax5WfM+gPrQKcSnpV2aTlx/UHhCNRFE/eOyKpxjcjQk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMRenderViewController.h</key>
@@ -1357,7 +1395,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oy1WoZXne0MrI27r1g0sMNbapz7Vthb8JYNlDuVmdmc=
+			RKlH/XY4+PndnzhpA2UcKHlAjgeAP5pdyARRg02JPxg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMSDKCommonsNetworkReachabilityObjc.h</key>
@@ -1371,7 +1409,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bYRw0h3C7wbEn1NLbiKE4e/8vvyAiYxX0apHHoEwU4Y=
+			3zMXzh6LbFmnD8tyWK9/8xL8SC/PBMkEyxVCYwurbK4=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMSDKSKANUtil.h</key>
@@ -1416,11 +1454,25 @@
 			u1hT5xzEVGyoxHWTn+YDe/hzw3AQj2upuSxjsvf6hPc=
 			</data>
 		</dict>
+		<key>PrivateHeaders/IMSKStoreManager+AppOwnership.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			I7XpqsccYi/hFolO/4TS0n1rTurhjhcA5D5pxvD4HFo=
+			</data>
+		</dict>
+		<key>PrivateHeaders/IMSKStoreManager+Private.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			U93TIixcuJUgBmUusHn0fDitvQB5nMruM/8g1uxxjUc=
+			</data>
+		</dict>
 		<key>PrivateHeaders/IMSKStoreManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sh2YXt8gI08u39A0aHD/YKGhQPgnJkf2SikClP1sc6g=
+			13G1Rt0j1VN3dsEjheiyNhGuf8XTpKm3JZn+X/wz1kI=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMSKStoreProcessor.h</key>
@@ -1462,7 +1514,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MiiXRut5WmQNGvMHFlnvRY3a/0uvbWE76/RGhsOKGfY=
+			5xobCYHmeeOaGP3k7o/EbhLD5uHBut6vCgyG/yA7bMk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMTelemetryRequest.h</key>
@@ -1532,21 +1584,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tluXvxnQ+nq9Xnj32PKuNQECloRwfJiOovFzjl/CIuM=
+			4iNFlBuEAaStT29Rx/myyS2LMYwxAvftjTYEouO6ehk=
+			</data>
+		</dict>
+		<key>PrivateHeaders/IMViewProcessor+EmbeddedBrowserAppOwnership.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			viseMhxQ8DY3RyZ6YCt1HSpeb30nn0lo5D7izrAeFaU=
+			</data>
+		</dict>
+		<key>PrivateHeaders/IMViewProcessor+LandingPageLoadingOverlay.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wpK+XfUUpByNdrjQhYSYH2QDz9Bm4mMsK9ZLkjLzjVk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMViewProcessor+Private.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6NVj6nIrgB40bu/vYRMILHH8JopTT0ORY3XXDDPLpdw=
+			Ku0e1api941FwOM6s1V/hV9CP+Zxt0HEbxB0AVunAPg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMViewProcessor.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uF04r/RLKW2O93aQQTTpmB0WPGd/A5kNnkyJmLSbw/Y=
+			UnKr8i973vJd7EctFoBOQJ4lCqecFFenv6chHGxGVUI=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMViewability.h</key>
@@ -1574,7 +1640,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O6liJ/8gI2NNLk8OpC8zbPpCf96YphQrmBysNY5Jh+k=
+			RKRj8Q4+kmNT4TcrpRlhjYqUDTlK0iMDuX5zM90JtWk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/IMWebToNativeCall.h</key>
